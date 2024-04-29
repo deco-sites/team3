@@ -1,18 +1,29 @@
 {
   "Banner Grid - 01": {
-    "title": "Summer bags",
     "banners": [
       {
         "alt": "a",
         "href": "a",
         "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/82727553-f670-4e7c-b9c2-9452aed1955f",
-        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7b3a9d75-57a5-43cf-a3c5-f689a997f24e"
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/82313116-f84e-4806-95f7-4e8f29996cf7"
       },
       {
         "alt": "a",
         "href": "a",
         "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/c5c6bdf6-5555-488c-8b14-719e4158dea6",
-        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/3e2b7824-d75c-4704-8d32-621bfc9b20cf"
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/78f163f2-20a6-4108-8783-06d3ec37fdf6"
+      },
+      {
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/835a916f-a68b-4ef4-8010-a9fa0d7beec2",
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/46ee49b6-3feb-41a6-bc5f-963153700fec",
+        "alt": "a/",
+        "href": "/"
+      },
+      {
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/e4b7ed28-f79d-4f26-afbc-fd259e5be22b",
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/230ed8f6-07c0-4d0c-a2a4-33f5152a3bd8",
+        "alt": "a",
+        "href": "a"
       }
     ],
     "borderRadius": {
@@ -21,7 +32,7 @@
     },
     "itemsPerLine": {
       "mobile": 2,
-      "desktop": 2
+      "desktop": 6
     },
     "__resolveType": "site/sections/Images/BannerGrid.tsx"
   },
@@ -3174,7 +3185,7 @@
         "__resolveType": "Benefits - 01"
       },
       {
-        "__resolveType": "site/sections/Category/CategoryList.tsx"
+        "__resolveType": "Banner Grid - 01"
       },
       {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
