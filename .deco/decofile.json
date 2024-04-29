@@ -1,18 +1,29 @@
 {
   "Banner Grid - 01": {
-    "title": "Summer bags",
     "banners": [
       {
         "alt": "a",
         "href": "a",
         "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/82727553-f670-4e7c-b9c2-9452aed1955f",
-        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7b3a9d75-57a5-43cf-a3c5-f689a997f24e"
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/82313116-f84e-4806-95f7-4e8f29996cf7"
       },
       {
         "alt": "a",
         "href": "a",
         "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/c5c6bdf6-5555-488c-8b14-719e4158dea6",
-        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/3e2b7824-d75c-4704-8d32-621bfc9b20cf"
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/78f163f2-20a6-4108-8783-06d3ec37fdf6"
+      },
+      {
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/835a916f-a68b-4ef4-8010-a9fa0d7beec2",
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/46ee49b6-3feb-41a6-bc5f-963153700fec",
+        "alt": "a/",
+        "href": "/"
+      },
+      {
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/e4b7ed28-f79d-4f26-afbc-fd259e5be22b",
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/230ed8f6-07c0-4d0c-a2a4-33f5152a3bd8",
+        "alt": "a",
+        "href": "a"
       }
     ],
     "borderRadius": {
@@ -21,35 +32,43 @@
     },
     "itemsPerLine": {
       "mobile": 2,
-      "desktop": 2
+      "desktop": 6
     },
     "__resolveType": "site/sections/Images/BannerGrid.tsx"
   },
   "Benefits - 01": {
-    "title": "Take a look at our benefits",
     "benefits": [
       {
         "icon": "Truck",
-        "label": "Free Shipping Worldwide",
-        "description": "Shop online with no additional fees!"
+        "label": "Frete Grátis Acima de R$ 500",
+        "description": "."
       },
       {
-        "icon": "Phone",
-        "label": "24/7 Online Support",
-        "description": "Instant assistance anytime"
+        "icon": "QuestionMarkCircle",
+        "label": "Pague com Pix e Ganhe 3% OFF",
+        "description": "."
       },
       {
         "icon": "Discount",
-        "label": "15% on the first purchase",
-        "description": "Discount for new customers"
+        "label": "Compre no Site e Troque na Loja",
+        "description": "."
       },
       {
         "icon": "ArrowsPointingOut",
-        "label": "Hassle-Free Returns",
-        "description": "Easy and Convenient Return Policy"
+        "label": "Parcele em Até 10x Sem Juros",
+        "description": "."
+      },
+      {
+        "icon": "ArrowsPointingOut",
+        "label": "10% de Desconto Primeira Compra",
+        "description": "."
       }
     ],
-    "__resolveType": "site/sections/Content/Benefits.tsx"
+    "__resolveType": "site/sections/Content/Benefits.tsx",
+    "layout": {
+      "variation": "Simple",
+      "headerAlignment": "center"
+    }
   },
   "Benefits - 02": {
     "title": "Take a look at our benefits ",
@@ -194,7 +213,8 @@
       }
     ],
     "preload": true,
-    "__resolveType": "site/sections/Images/Carousel.tsx"
+    "__resolveType": "site/sections/Images/Carousel.tsx",
+    "arrows": false
   },
   "Category Banner - 01": {
     "banners": [
@@ -3165,7 +3185,7 @@
         "__resolveType": "Benefits - 01"
       },
       {
-        "__resolveType": "site/sections/Category/CategoryList.tsx"
+        "__resolveType": "Banner Grid - 01"
       },
       {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -3370,6 +3390,10 @@
         "__resolveType": "Header - 01"
       },
       {
+        "__resolveType": "Category Banner - 01"
+      },
+      {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "PLP Loader"
         },
@@ -3379,8 +3403,7 @@
             "desktop": 4
           },
           "variant": "aside"
-        },
-        "__resolveType": "site/sections/Product/SearchResult.tsx"
+        }
       },
       {
         "__resolveType": "Footer - 01"
