@@ -15,7 +15,7 @@ export default function ShelfWithImage({ section, image }: Props) {
   return (
     <div class="container">
       <div class="grid md:grid-cols-2 grid-cols-1 bg-neutral-content">
-        <div class="md:max-w-xs mx-auto flex items-center">
+        <div class="mx-auto flex items-center">
           <section.Component {...section.props} />
         </div>
         <a href={image.href}>

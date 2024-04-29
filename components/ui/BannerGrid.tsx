@@ -87,7 +87,7 @@ const RADIUS_DESKTOP = {
 };
 
 const DEFAULT_PROPS: Props = {
-  title: "Summer bags",
+  title: "",
   banners: [
     {
       alt: "a",
@@ -126,16 +126,6 @@ export default function BannnerGrid(props: Props) {
 
   return (
     <section class="container w-full px-4 md:px-0 mx-auto">
-      {title &&
-        (
-          <div class="py-6 md:py-0 md:pb-[40px] flex items-center mt-6">
-            <h2 class="text-lg leading-5 font-semibold uppercase">
-              {title}
-            </h2>
-
-            <div class="bg-[#e5e5ea] h-[1px] w-full ml-4"></div>
-          </div>
-        )}
       <div
         class={`grid gap-4 md:gap-6 ${
           MOBILE_COLUMNS[itemsPerLine?.mobile ?? 2]
