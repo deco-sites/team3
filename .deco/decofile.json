@@ -3466,39 +3466,6 @@
         }
       },
       {
-        "__resolveType": "site/sections/Content/BlogPosts.tsx",
-        "title": "Blogposts",
-        "posts": [
-          {
-            "alt": "Item of the Summer",
-            "date": "January 15, 2024",
-            "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/7e80b083-d1ff-480d-b3a3-b744b69402b1",
-            "label": "Item of the Summer",
-            "author": "deco.cx",
-            "description": "Lorem ipsum dolor sit amet consectetur. Condimentum dolor ultrices commodo et. Blandit vel est sodales tincidunt aliquam tincidunt. "
-          },
-          {
-            "alt": "Item of the Summer",
-            "date": "January 15, 2024",
-            "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/a3f329d8-795c-4c3b-8049-ede939d599ef",
-            "label": "Item of the Summer",
-            "author": "deco.cx",
-            "description": "Lorem ipsum dolor sit amet consectetur. Condimentum dolor ultrices commodo et. Blandit vel est sodales tincidunt aliquam tincidunt. "
-          },
-          {
-            "alt": "Item of the Summer",
-            "date": "January 15, 2024",
-            "href": "/",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/7e80b083-d1ff-480d-b3a3-b744b69402b1",
-            "label": "Item of the Summer",
-            "author": "deco.cx",
-            "description": "Lorem ipsum dolor sit amet consectetur.  Condimentum dolor ultrices commodo et. Blandit vel est sodales tincidunt aliquam tincidunt. "
-          }
-        ]
-      },
-      {
         "__resolveType": "Footer - 04"
       }
     ],
@@ -3704,8 +3671,5 @@
   },
   "weather": {
     "__resolveType": "decohub/apps/weather.ts"
-  },
-  "Preview /sections/Product/ProductShelf.tsx": {
-    "__resolveType": "site\\sections\\Product\\ProductShelf.tsx"
   }
 }
