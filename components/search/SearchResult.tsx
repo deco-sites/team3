@@ -68,8 +68,10 @@ function Result({
   return (
     <>
       <div class="container px-16 sm:py-10">
-        <div>
-          <h1>TITLE: {page.breadcrumb.name}</h1>
+        <div class="flex">
+          <h1 class="text-4xl text-black border-r border-slate-100">
+            {page.breadcrumb.itemListElement[0].name}
+          </h1>
         </div>
         {(isFirstPage || !isPartial) && (
           <SearchControls
