@@ -72,11 +72,12 @@ function Result({
           <h1 class="text-4xl text-black">
             {page.breadcrumb.itemListElement[0].name}
           </h1>
-          <hr 
-            class="border border-zinc-300 w-[1px] h-14"
-          />
+          <hr class="border border-zinc-300 w-[1px] h-14" />
           <p class="text-zinc-300">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus non accusamus, est minima aspernatur qui suscipit. Eos, corrupti consequuntur. Labore laborum quidem fugiat tenetur molestiae modi cupiditate qui dolore necessitatibus.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus non accusamus, est minima aspernatur qui suscipit. Eos,
+            corrupti consequuntur. Labore laborum quidem fugiat tenetur
+            molestiae modi cupiditate qui dolore necessitatibus.
           </p>
         </div>
         {(isFirstPage || !isPartial) && (

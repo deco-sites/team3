@@ -89,11 +89,15 @@ function ProductCard({
             )}
           >
             {/* Discount % */}
-            {Math.round((((listPrice ?? 0) - (price ?? 0)) / (listPrice ?? 0)) * 100) > 0 && (
+            {Math.round(
+                  (((listPrice ?? 0) - (price ?? 0)) / (listPrice ?? 0)) * 100,
+                ) > 0 && (
               <div class="text-sm px-3 bg-pink-500 rounded-sm text-white">
                 <span class="font-bold">
                   {listPrice && price
-                    ? `-${Math.round(((listPrice - price) / listPrice) * 100)}% `
+                    ? `-${
+                      Math.round(((listPrice - price) / listPrice) * 100)
+                    }% `
                     : ""}
                 </span>
               </div>
@@ -163,8 +167,8 @@ function ProductCard({
               aria-label="view product"
               class="hidden group-hover:flex justify-center absolute bottom-4 bg-black text-white py-2 w-[80%]"
             >
-          Adicionar à sacola
-        </a>
+              Adicionar à sacola
+            </a>
           </a>
         </figure>
 
@@ -192,8 +196,6 @@ function ProductCard({
             ou {installments}
           </span>
         )}
-
-        
       </div>
     </div>
   );

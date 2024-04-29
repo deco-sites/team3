@@ -62,13 +62,9 @@ export default function Benefits(
           reverse ? "bg-primary text-primary-content p-4 lg:px-8 lg:py-4" : ""
         } flex gap-4 ${
           benefitLayout == "piledup" ? "flex-col items-center text-center" : ""
-        } ${
-          showDivider && benefitLayout !== "piledup"
-            ? ""
-            : ""
-        } ${showDivider ? "" : ""} ${
-          showDivider && !reverse ? "lg:pb-0" : ""
-        }`}
+        } ${showDivider && benefitLayout !== "piledup" ? "" : ""} ${
+          showDivider ? "" : ""
+        } ${showDivider && !reverse ? "lg:pb-0" : ""}`}
       >
         <div class="flex-none">
           <Icon

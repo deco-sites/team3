@@ -68,7 +68,7 @@ function Navbar(
   // Desktop header
   return (
     <div class="hidden sm:grid sm:grid-cols-3 items-center border-b border-base-200 w-full px-6">
-        <div
+      <div
         class={`flex ${
           logoPosition === "left" ? "justify-start -order-1" : "justify-center"
         }`}
@@ -88,7 +88,7 @@ function Navbar(
           </a>
         )}
       </div>
-      
+
       <ul
         class={`flex gap-6 col-span-1 ${
           logoPosition === "left" ? "justify-center" : "justify-start"
@@ -96,7 +96,7 @@ function Navbar(
       >
         {items.map((item) => <NavItem item={item} />)}
       </ul>
-    
+
       <div class="flex-none flex items-center justify-end gap-6 col-span-1">
         {!buttons?.hideSearchButton && (
           <div class="flex items-center text-xs font-thin gap-1">

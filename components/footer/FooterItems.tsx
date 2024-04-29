@@ -25,7 +25,7 @@ export default function FooterItems(
           >
             {sections.map((section) => (
               <li>
-                <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2 w-77">
                   <span class="font-medium text-lg">
                     {section.label}
                   </span>

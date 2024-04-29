@@ -46,13 +46,16 @@ function Newsletter(
   return (
     <div
       class={clx(
-        "flex flex-col gap-4",
-        tiled && "lg:flex-row lg:w-full lg:justify-between",
+        "flex flex-col gap-4 bg-[#F5F5F5] p-10 max-w-96",
       )}
     >
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 text-center">
         {content?.title && (
-          <h4 class={tiled ? "text-2xl lg:text-3xl" : "text-lg"}>
+          <h4
+            class={tiled
+              ? "text-2xl lg:text-3xl text-[#1A1A1A]"
+              : "text-lg text-[#1A1A1A] text-center"}
+          >
             {content?.title}
           </h4>
         )}
@@ -65,25 +68,24 @@ function Newsletter(
         >
           <div class="flex flex-wrap gap-3">
             <input
+              name="nome"
+              class="flex-auto md:flex-none input input-bordered md:w-80 text-base-content"
+              placeholder={content?.form?.placeholder || "Nome"}
+            />
+            <input
               name="email"
               class="flex-auto md:flex-none input input-bordered md:w-80 text-base-content"
-              placeholder={content?.form?.placeholder || "Digite seu email"}
+              placeholder={content?.form?.placeholder || "E-mail"}
             />
             <button
               type="submit"
-              class="btn disabled:loading"
+              class="btn disabled:loading bg-[#E9177C] text-[#FFFFFF] w-full"
               disabled={loading}
             >
-              {content?.form?.buttonText || "Inscrever"}
+              {content?.form?.buttonText || "Enivar"}
             </button>
           </div>
         </form>
-        {content?.form?.helpText && (
-          <div
-            class="text-sm"
-            dangerouslySetInnerHTML={{ __html: content?.form?.helpText }}
-          />
-        )}
       </div>
     </div>
   );

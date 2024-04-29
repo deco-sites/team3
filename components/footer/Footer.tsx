@@ -11,6 +11,7 @@ import Newsletter from "../../islands/Newsletter.tsx";
 import { clx } from "../../sdk/clx.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+import Icon from "../ui/Icon.tsx";
 
 export type Item = {
   label: string;
@@ -127,7 +128,7 @@ function Footer({
     form: { placeholder: "", buttonText: "", helpText: "" },
   },
   sections = [{
-    "label": "Sobre",
+    "label": "Institucional",
     "items": [
       {
         "href": "/quem-somos",
@@ -135,27 +136,27 @@ function Footer({
       },
       {
         "href": "/termos-de-uso",
-        "label": "Termos de uso",
+        "label": "Trocas e Devoluções",
       },
       {
         "href": "/trabalhe-conosco",
-        "label": "Trabalhe conosco",
+        "label": "Prazos e entrega",
+      },
+      {
+        "href": "/trabalhe-conosco",
+        "label": "Envio de encomenda",
       },
     ],
   }, {
-    "label": "Atendimento",
+    "label": "Contato",
     "items": [
       {
         "href": "/centraldeatendimento",
-        "label": "Central de atendimento",
+        "label": "Whatsapp: (11) 99999-9999",
       },
       {
         "href": "/whatsapp",
-        "label": "Fale conosco pelo WhatsApp",
-      },
-      {
-        "href": "/trocaedevolucao",
-        "label": "Troca e devolução",
+        "label": "E-mail: sac@fashion.com.br",
       },
     ],
   }],
@@ -197,28 +198,13 @@ function Footer({
       }}
     />
   );
-  const _sectionLinks = layout?.hide?.sectionLinks ? <></> : (
-    <FooterItems
-      sections={sections}
-      justify={layout?.variation == "Variation 2" ||
-        layout?.variation == "Variation 3"}
-    />
-  );
+
   const _social = layout?.hide?.socialLinks
     ? <></>
-    : <Social content={social} vertical={layout?.variation == "Variation 3"} />;
+    : <Social content={social} />;
   const _payments = layout?.hide?.paymentMethods
     ? <></>
     : <PaymentMethods content={payments} />;
-  const _apps = layout?.hide?.mobileApps
-    ? <></>
-    : <MobileApps content={mobileApps} />;
-  const _region = layout?.hide?.regionOptions
-    ? <></>
-    : <RegionSelector content={regionOptions} />;
-  const _links = layout?.hide?.extraLinks
-    ? <></>
-    : <ExtraLinks content={extraLinks} />;
 
   return (
     <footer
@@ -228,132 +214,108 @@ function Footer({
       )}
     >
       <div class="lg:container mx-6 lg:mx-auto">
-        {(!layout?.variation || layout?.variation == "Variation 1") && (
-          <div class="flex flex-col gap-10">
-            <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap gap-8 lg:gap-12">
-              {_logo}
-              {_sectionLinks}
-              {_newsletter}
-            </div>
-            <Divider />
-            <div class="flex flex-col md:flex-row gap-10 md:gap-14 md:items-end">
-              {_payments}
-              {_social}
-              <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 lg:items-end">
-                {_apps}
-                {_region}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
-            </div>
-          </div>
-        )}
-        {layout?.variation == "Variation 2" && (
-          <div class="flex flex-col gap-10">
-            <div class="flex flex-col md:flex-row gap-10">
-              <div class="flex flex-col gap-10 lg:w-1/2">
-                {_logo}
-                {_social}
-                {_payments}
-                {_apps}
-                {_region}
-              </div>
-              <div class="flex flex-col gap-10 lg:gap-20 lg:w-1/2 lg:pr-10">
-                {_newsletter}
-                {_sectionLinks}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
-            </div>
-          </div>
-        )}
-        {layout?.variation == "Variation 3" && (
-          <div class="flex flex-col gap-10">
-            {_logo}
-            <div class="flex flex-col lg:flex-row gap-14">
-              <div class="flex flex-col md:flex-row lg:flex-col md:justify-between lg:justify-normal gap-10 lg:w-2/5">
-                {_newsletter}
-                <div class="flex flex-col gap-10">
-                  {_payments}
-                  {_apps}
-                </div>
-              </div>
-              <div class="flex flex-col gap-10 lg:gap-20 lg:w-3/5 lg:items-end">
-                <div class="flex flex-col md:flex-row gap-10">
-                  {_sectionLinks}
-                  {_social}
-                </div>
-                {_region}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
-              <PoweredByDeco />
-              {_links}
-            </div>
-          </div>
-        )}
-        {layout?.variation == "Variation 4" && (
-          <div class="flex flex-col gap-10">
-            {_newsletter}
-            {layout?.hide?.newsletter ? <></> : <Divider />}
-            <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:justify-between">
-              {_sectionLinks}
-              <div class="flex flex-col md:flex-row lg:flex-col gap-10 lg:gap-10 lg:w-2/5 lg:pl-10">
-                <div class="flex flex-col md:flex-row gap-10 lg:gap-20">
-                  <div class="lg:flex-auto">
-                    {_payments}
-                  </div>
-                  <div class="lg:flex-auto">
+        <div class="flex flex-col gap-10">
+          <div class="flex flex-col md:flex-row gap-10 lg:gap-20 md:justify-between">
+            {sections.length > 0 && (
+              <>
+                {/* Tablet and Desktop view */}
+                <ul
+                  class={`hidden md:flex flex-row gap-6 lg:gap-10 h-70`}
+                >
+                  <div class="flex w-75 flex-wrap justify-end content-start">
+                    {sections.map((section) => (
+                      <li class="h-52">
+                        <div class="flex flex-col gap-2 w-80 h-52">
+                          <span class="font-medium text-lg">
+                            {section.label}
+                          </span>
+                          <ul class={`flex flex-col gap-2 flex-wrap text-sm`}>
+                            {section.items?.map((item) => (
+                              <li>
+                                <a
+                                  href={item.href}
+                                  class="block py-1 link link-hover"
+                                >
+                                  {item.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    ))}
                     {_social}
                   </div>
-                </div>
-                <div class="flex flex-col gap-10 lg:gap-10">
-                  {_region}
-                  {_apps}
-                </div>
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col md:flex-row md:justify-between gap-10 md:items-center">
-              {_logo}
-              <PoweredByDeco />
+                  <div class="flex">
+                    {_payments}
+                    {_newsletter}
+                  </div>
+                </ul>
+
+                {/* Mobile view */}
+                <ul class="flex flex-col md:hidden gap-4">
+                  {sections.map((section) => (
+                    <li>
+                      <div class="collapse collapse-arrow ">
+                        <input
+                          id={section.label}
+                          type="checkbox"
+                          class="min-h-[0]"
+                        />
+                        <label
+                          htmlFor={section.label}
+                          class="collapse-title min-h-[0] !p-0 flex gap-2"
+                        >
+                          <span>{section.label}</span>
+                        </label>
+                        <div class="collapse-content">
+                          <ul
+                            class={`flex flex-col gap-1 pl-5 pt-2`}
+                          >
+                            {section.items?.map((item) => (
+                              <li>
+                                <a
+                                  href={item.href}
+                                  class="block py-1 link link-hover"
+                                >
+                                  {item.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                  {_social}
+                  {_payments}
+                  {_newsletter}
+                </ul>
+              </>
+            )}
+          </div>
+          <Divider />
+          <div class="flex justify-between">
+            <span>
+              © 2022 - Fashion - CNPJ: 00.000.000/0001-00 - Todos os Direitos
+              Reservados
+            </span>
+            <div class="flex gap-5">
+              <Icon
+                id="Econverselogo"
+                size={72}
+                fill="currentColor"
+              />
+
+              <Icon
+                id="Vtexlogo"
+                size={72}
+                fill="currentColor"
+              />
             </div>
           </div>
-        )}
-        {layout?.variation == "Variation 5" && (
-          <div class="flex flex-col gap-10">
-            {_newsletter}
-            {layout?.hide?.newsletter ? <></> : <Divider />}
-            {_logo}
-            <div class="flex flex-col md:flex-row gap-10 lg:gap-20 md:justify-between">
-              {_sectionLinks}
-              <div class="flex flex-col gap-10 md:w-2/5 lg:pl-10">
-                {_payments}
-                {_social}
-                {_apps}
-              </div>
-            </div>
-            <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10 md:items-center">
-              <PoweredByDeco />
-              <div class="flex flex-col md:flex-row gap-10 md:items-center">
-                {_links}
-                {_region}
-              </div>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
-      {layout?.hide?.backToTheTop
-        ? <></>
-        : <BackToTop content={backToTheTop?.text} />}
     </footer>
   );
 }
