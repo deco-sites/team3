@@ -67,7 +67,10 @@ function Result({
 
   return (
     <>
-      <div class="container px-4 sm:py-10">
+      <div class="container px-16 sm:py-10">
+        <div>
+          <h1>TITLE: {page.breadcrumb.name}</h1>
+        </div>
         {(isFirstPage || !isPartial) && (
           <SearchControls
             sortOptions={sortOptions}
