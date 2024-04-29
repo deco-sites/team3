@@ -2694,7 +2694,21 @@
       {
         "url": "/linktree",
         "name": "Link Tree",
-        "@type": "SiteNavigationElement"
+        "@type": "SiteNavigationElement",
+        "children": []
+      },
+      {
+        "children": [
+          {
+            "image": [],
+            "children": []
+          }
+        ],
+        "image": [],
+        "name": "New",
+        "identifier": "New",
+        "additionalType": "New",
+        "url": "/"
       }
     ],
     "__resolveType": "commerce/loaders/navbar.ts"
