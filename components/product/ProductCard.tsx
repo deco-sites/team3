@@ -83,7 +83,7 @@ function ProductCard({
           {/* Wishlist button */}
           <div
             class={clx(
-              "absolute top-0 left-1",
+              "absolute top-0 left-0",
               "z-10 w-full",
               "flex items-center justify-end",
             )}
