@@ -64,9 +64,9 @@ export default function Benefits(
           benefitLayout == "piledup" ? "flex-col items-center text-center" : ""
         } ${
           showDivider && benefitLayout !== "piledup"
-            ? "border-b border-neutral-300"
+            ? ""
             : ""
-        } ${showDivider ? "pb-4 lg:pr-8 lg:border-r lg:border-b-0" : ""} ${
+        } ${showDivider ? "" : ""} ${
           showDivider && !reverse ? "lg:pb-0" : ""
         }`}
       >
@@ -105,11 +105,6 @@ export default function Benefits(
       {!layout?.variation || layout?.variation === "Simple"
         ? (
           <div class="w-full container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
-            <Header
-              title={title}
-              description={description}
-              alignment={layout?.headerAlignment || "center"}
-            />
             <div class="w-full flex justify-center">
               <div class="flex flex-col gap-4 lg:gap-8 w-full lg:grid grid-flow-col auto-cols-fr">
                 {listOfBenefits}
@@ -120,11 +115,6 @@ export default function Benefits(
         : ""}
       {layout?.variation === "With border" && (
         <div class="w-full container flex flex-col px-4 py-8 gap-8 lg:gap-10 lg:py-10 lg:px-0">
-          <Header
-            title={title}
-            description={description}
-            alignment={layout?.headerAlignment || "center"}
-          />
           <div class="w-full flex justify-center">
             <div class="grid grid-cols-2 gap-4 w-full py-6 px-4 border border-base-300 lg:gap-8 lg:grid-flow-col lg:auto-cols-fr lg:p-10">
               {listOfBenefits}
@@ -134,11 +124,6 @@ export default function Benefits(
       )}
       {layout?.variation === "Color reverse" && (
         <div class="w-full container flex flex-col px-4 py-8 gap-8 lg:gap-10 lg:py-10 lg:px-0">
-          <Header
-            title={title}
-            description={description}
-            alignment={layout?.headerAlignment || "center"}
-          />
           <div class="w-full flex justify-center">
             <div class="grid grid-cols-2 gap-4 w-full lg:gap-8 lg:grid-flow-col lg:auto-cols-fr">
               {listOfBenefits}

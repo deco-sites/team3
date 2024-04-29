@@ -116,22 +116,6 @@ function BannerItem(
       aria-label={action?.label}
       class="relative overflow-y-hidden w-full"
     >
-      {action && (
-        <div class="absolute top-0 md:bottom-0 bottom-1/2 left-0 right-0 sm:right-auto max-w-[407px] flex flex-col justify-end gap-4 px-8 py-12">
-          <span class="text-2xl font-light text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-4xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button
-            class="bg-base-100 text-sm font-light py-4 px-6 w-fit"
-            aria-label={action.label}
-          >
-            {action.label}
-          </Button>
-        </div>
-      )}
       <Picture preload={lcp}>
         <Source
           media="(max-width: 767px)"
@@ -194,7 +178,7 @@ function Buttons() {
   return (
     <>
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.PrevButton class="btn btn-circle glass">
+        <Slider.PrevButton class="w-8 h-8 bg-white opacity-60 flex items-center justify-center">
           <Icon
             class="text-base-100"
             size={24}
@@ -204,7 +188,7 @@ function Buttons() {
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.NextButton class="btn btn-circle glass">
+        <Slider.NextButton class="w-8 h-8 bg-white opacity-60 flex items-center justify-center">
           <Icon
             class="text-base-100"
             size={24}

@@ -138,7 +138,7 @@ function CategoryList(props: Props) {
               href={href}
               class="flex flex-col gap-4 lg:w-[280px] w-40 lg:h-auto"
             >
-              {layout.categoryCard?.textPosition === "top" &&
+              {/* {layout.categoryCard?.textPosition === "top" &&
                 (
                   <CardText
                     tag={tag}
@@ -146,7 +146,7 @@ function CategoryList(props: Props) {
                     description={description}
                     alignment={layout?.categoryCard?.textAlignment}
                   />
-                )}
+                )} */}
               {image &&
                 (
                   <figure>
@@ -160,7 +160,7 @@ function CategoryList(props: Props) {
                     />
                   </figure>
                 )}
-              {layout.categoryCard?.textPosition === "bottom" &&
+              {/* {layout.categoryCard?.textPosition === "bottom" &&
                 (
                   <CardText
                     tag={tag}
@@ -168,10 +168,10 @@ function CategoryList(props: Props) {
                     description={description}
                     alignment={layout?.categoryCard?.textAlignment}
                   />
-                )}
+                )} */}
             </a>
-            {buttonText &&
-              <a href={href} class="btn">{buttonText}</a>}
+            {/* {buttonText &&
+              <a href={href} class="btn">{buttonText}</a>} */}
           </Slider.Item>
         ))}
       </Slider>
