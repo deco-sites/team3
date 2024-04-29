@@ -188,7 +188,7 @@ function ProductCard({
         <a
           href={relativeUrl}
           aria-label="view product"
-          class="btn btn-block hidden group-hover:flex absolute bottom-4 font-bold"
+          class="hidden group-hover:flex justify-center absolute bottom-4 font-bold bg-black text-white w-full py-2"
         >
           Ver produto
         </a>
