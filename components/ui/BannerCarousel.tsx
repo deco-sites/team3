@@ -4,7 +4,6 @@ import {
   SendEventOnClick,
   SendEventOnView,
 } from "../../components/Analytics.tsx";
-import Button from "../../components/ui/Button.tsx";
 import Icon from "../../components/ui/Icon.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
@@ -22,10 +21,6 @@ export interface Banner {
   action?: {
     /** @description when user clicks on the image, go to this link */
     href: string;
-    /** @description Image text title */
-    title: string;
-    /** @description Image text subtitle */
-    subTitle: string;
     /** @description Button label */
     label: string;
   };
@@ -58,12 +53,6 @@ const DEFAULT_PROPS = {
   images: [
     {
       alt: "/feminino",
-      action: {
-        title: "New collection",
-        subTitle: "Main title",
-        label: "Explore collection",
-        href: "/",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -71,12 +60,6 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
-      action: {
-        title: "New collection",
-        subTitle: "Main title",
-        label: "Explore collection",
-        href: "/",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -84,12 +67,6 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
-      action: {
-        title: "New collection",
-        subTitle: "Main title",
-        label: "Explore collection",
-        href: "/",
-      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -116,22 +93,6 @@ function BannerItem(
       aria-label={action?.label}
       class="relative overflow-y-hidden w-full"
     >
-      {action && (
-        <div class="absolute top-0 md:bottom-0 bottom-1/2 left-0 right-0 sm:right-auto max-w-[407px] flex flex-col justify-end gap-4 px-8 py-12">
-          <span class="text-2xl font-light text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-4xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button
-            class="bg-base-100 text-sm font-light py-4 px-6 w-fit"
-            aria-label={action.label}
-          >
-            {action.label}
-          </Button>
-        </div>
-      )}
       <Picture preload={lcp}>
         <Source
           media="(max-width: 767px)"
@@ -174,7 +135,7 @@ function Dots({ images, interval = 0 }: Props) {
       />
       <ul class="carousel justify-center col-span-full gap-6 z-10 row-start-4">
         {images?.map((_, index) => (
-          <li class="carousel-item">
+          <li class="carousel-item">z
             <Slider.Dot index={index}>
               <div class="py-5">
                 <div
@@ -194,20 +155,18 @@ function Buttons() {
   return (
     <>
       <div class="flex items-center justify-center z-10 col-start-1 row-start-2">
-        <Slider.PrevButton class="btn btn-circle glass">
+        <Slider.PrevButton class="w-8 h-8 bg-white opacity-60 flex items-center justify-center">
           <Icon
-            class="text-base-100"
-            size={24}
+            size={12}
             id="ChevronLeft"
             strokeWidth={3}
           />
         </Slider.PrevButton>
       </div>
       <div class="flex items-center justify-center z-10 col-start-3 row-start-2">
-        <Slider.NextButton class="btn btn-circle glass">
+        <Slider.NextButton class="w-8 h-8 bg-white opacity-60 flex items-center justify-center">
           <Icon
-            class="text-base-100"
-            size={24}
+            size={12}
             id="ChevronRight"
             strokeWidth={3}
           />
