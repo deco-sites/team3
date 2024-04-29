@@ -54,7 +54,7 @@ function ProductCard({
     <div
       id={id}
       data-deco="view-product"
-      class="card card-compact group w-full lg:border lg:border-transparent lg:hover:border-inherit lg:p-4 relative"
+      class="card card-compact group w-full lg:border lg:border-transparent lg:hover:border-inherit relative"
     >
       {/* Add click event to dataLayer */}
       <SendEventOnClick
@@ -158,13 +158,20 @@ function ProductCard({
               loading="lazy"
               decoding="async"
             />
+            <a
+              href={relativeUrl}
+              aria-label="view product"
+              class="hidden group-hover:flex justify-center absolute bottom-4 bg-black text-white py-2 w-[80%]"
+            >
+          Adicionar à sacola
+        </a>
           </a>
         </figure>
 
         {/* Name/Description */}
         <div class="flex flex-col">
           <h2
-            class="truncate text-base lg:text-lg uppercase text-black"
+            class="truncate text-base uppercase text-black"
             dangerouslySetInnerHTML={{ __html: name ?? "" }}
           />
         </div>
@@ -186,13 +193,7 @@ function ProductCard({
           </span>
         )}
 
-        <a
-          href={relativeUrl}
-          aria-label="view product"
-          class="hidden group-hover:flex justify-center absolute bottom-4 font-bold bg-black text-white w-full py-2"
-        >
-          Ver produto
-        </a>
+        
       </div>
     </div>
   );
