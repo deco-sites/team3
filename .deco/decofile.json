@@ -3390,6 +3390,10 @@
         "__resolveType": "Header - 01"
       },
       {
+        "__resolveType": "Category Banner - 01"
+      },
+      {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "PLP Loader"
         },
@@ -3399,8 +3403,7 @@
             "desktop": 4
           },
           "variant": "aside"
-        },
-        "__resolveType": "site/sections/Product/SearchResult.tsx"
+        }
       },
       {
         "__resolveType": "Footer - 01"
