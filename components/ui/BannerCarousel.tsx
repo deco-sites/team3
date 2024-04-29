@@ -53,6 +53,10 @@ const DEFAULT_PROPS = {
   images: [
     {
       alt: "/feminino",
+      action: {
+        label: "Explore collection",
+        href: "/",
+      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -60,6 +64,10 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
+      action: {
+        label: "Explore collection",
+        href: "/",
+      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
@@ -67,6 +75,10 @@ const DEFAULT_PROPS = {
     },
     {
       alt: "/feminino",
+      action: {
+        label: "Explore collection",
+        href: "/",
+      },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2291/c007e481-b1c6-4122-9761-5c3e554512c1",
       desktop:
