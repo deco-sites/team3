@@ -48,7 +48,7 @@ export default function Services({
             decoding="async"
             loading="lazy"
           />
-          <div class="w-full lg:w-1/2 flex-1 space-y-2 lg:space-y-4 lg:max-w-xl gap-4">
+          <div class="w-full lg:w-1/2 flex-1 space-y-2 lg:space-y-4 lg:max-w-xl gap-4 pl-20">
             {service.type && <p>{service.type}</p>}
             <p class="text-base-content text-[36px] md:text-[48px] leading-[120%] font-bold">
               {service.label}
@@ -58,6 +58,9 @@ export default function Services({
               dangerouslySetInnerHTML={{ __html: service.description || "" }}
             >
             </p>
+            <button class="bg-pink-500 p-4 text-white text-lg">
+              Saber mais
+            </button>
           </div>
         </div>
       ))}
