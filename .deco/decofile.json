@@ -3642,7 +3642,13 @@
     },
     "platform": "vtex",
     "__resolveType": "site/apps/site.ts",
-    "firstByteThresholdMS": true
+    "firstByteThresholdMS": false,
+    "abTesting": {
+      "replaces": [],
+      "includeScriptsToHead": {
+        "includes": []
+      }
+    }
   },
   "vtex-trigger": {
     "product": [
