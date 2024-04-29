@@ -2645,8 +2645,8 @@
         ]
       },
       {
-        "url": "/sale",
-        "name": "Sale",
+        "url": "/",
+        "name": "Calçados",
         "@type": "SiteNavigationElement",
         "image": [
           {
@@ -2692,8 +2692,8 @@
         ]
       },
       {
-        "url": "/linktree",
-        "name": "Link Tree",
+        "url": "/",
+        "name": "Infantil",
         "@type": "SiteNavigationElement",
         "children": []
       },
@@ -2708,6 +2708,18 @@
         "name": "New",
         "identifier": "New",
         "additionalType": "New",
+        "url": "/"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Sale",
+        "url": "/"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Acessórios",
         "url": "/"
       }
     ],
