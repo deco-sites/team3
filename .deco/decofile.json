@@ -3225,6 +3225,9 @@
         ]
       },
       {
+        "__resolveType": "Benefits - 01"
+      },
+      {
         "__resolveType": "site/sections/Miscellaneous/Slide.tsx",
         "content": [
           {
@@ -3270,7 +3273,8 @@
           "props": {
             "sort": "price:desc",
             "count": 6,
-            "collection": "139"
+            "collection": "145",
+            "similars": false
           },
           "crossSelling": "similars",
           "__resolveType": "vtex/loaders/intelligentSearch/productList.ts"
@@ -3401,6 +3405,7 @@
         }
       },
       {
+        "title": "Best Sellers",
         "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
         "tabs": [
           {
@@ -3426,7 +3431,6 @@
             }
           }
         ],
-        "title": "Best Sellers",
         "layout": {
           "headerfontSize": "Large",
           "headerAlignment": "center"
@@ -3436,8 +3440,8 @@
         }
       },
       {
-        "title": "Blogposts",
         "__resolveType": "site/sections/Content/BlogPosts.tsx",
+        "title": "Blogposts",
         "posts": [
           {
             "alt": "Item of the Summer",
@@ -3668,5 +3672,8 @@
   },
   "weather": {
     "__resolveType": "decohub/apps/weather.ts"
+  },
+  "Preview /sections/Product/ProductShelf.tsx": {
+    "__resolveType": "site\\sections\\Product\\ProductShelf.tsx"
   }
 }
