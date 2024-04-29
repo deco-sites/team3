@@ -158,6 +158,13 @@ function ProductCard({
               loading="lazy"
               decoding="async"
             />
+            <a
+              href={relativeUrl}
+              aria-label="view product"
+              class="hidden group-hover:flex justify-center absolute bottom-4 bg-black text-white py-2 w-[80%]"
+            >
+          Adicionar à sacola
+        </a>
           </a>
         </figure>
 
@@ -186,13 +193,7 @@ function ProductCard({
           </span>
         )}
 
-        <a
-          href={relativeUrl}
-          aria-label="view product"
-          class="hidden group-hover:flex justify-center absolute bottom-4 font-bold bg-black text-white w-full py-2"
-        >
-          Ver produto
-        </a>
+        
       </div>
     </div>
   );
