@@ -24,6 +24,12 @@
         "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/230ed8f6-07c0-4d0c-a2a4-33f5152a3bd8",
         "alt": "a",
         "href": "a"
+      },
+      {
+        "srcMobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/db0193f8-5b2e-4d48-9e9e-201c56878216",
+        "srcDesktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/e7aa60ec-d81c-4964-9596-3a757f83a2fd",
+        "alt": ".",
+        "href": "/"
       }
     ],
     "borderRadius": {
