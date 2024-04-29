@@ -135,7 +135,8 @@ function Dots({ images, interval = 0 }: Props) {
       />
       <ul class="carousel justify-center col-span-full gap-6 z-10 row-start-4">
         {images?.map((_, index) => (
-          <li class="carousel-item">z
+          <li class="carousel-item">
+            z
             <Slider.Dot index={index}>
               <div class="py-5">
                 <div
