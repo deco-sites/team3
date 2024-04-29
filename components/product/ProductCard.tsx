@@ -85,18 +85,19 @@ function ProductCard({
             class={clx(
               "absolute top-0 left-0",
               "z-10 w-full",
-              "flex items-center justify-end",
+              "flex items-center justify-between",
             )}
           >
             {/* Discount % */}
-            <div class="text-sm px-3">
-              <span class="font-bold">
-                {listPrice && price
-                  ? `${Math.round(((listPrice - price) / listPrice) * 100)}% `
-                  : ""}
-              </span>
-              OFF
-            </div>
+            {Math.round((((listPrice ?? 0) - (price ?? 0)) / (listPrice ?? 0)) * 100) > 0 && (
+              <div class="text-sm px-3 bg-pink-500 rounded-sm text-white">
+                <span class="font-bold">
+                  {listPrice && price
+                    ? `-${Math.round(((listPrice - price) / listPrice) * 100)}% `
+                    : ""}
+                </span>
+              </div>
+            )}
             <div class="lg:group-hover:block">
               {platform === "vtex" && (
                 <WishlistButtonVtex
