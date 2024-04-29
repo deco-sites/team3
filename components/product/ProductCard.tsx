@@ -54,7 +54,7 @@ function ProductCard({
     <div
       id={id}
       data-deco="view-product"
-      class="card card-compact group w-full lg:border lg:border-transparent lg:hover:border-inherit lg:p-4 relative"
+      class="card card-compact group w-full lg:border lg:border-transparent lg:hover:border-inherit relative"
     >
       {/* Add click event to dataLayer */}
       <SendEventOnClick
@@ -164,7 +164,7 @@ function ProductCard({
         {/* Name/Description */}
         <div class="flex flex-col">
           <h2
-            class="truncate text-base lg:text-lg uppercase text-black"
+            class="truncate text-base uppercase text-black"
             dangerouslySetInnerHTML={{ __html: name ?? "" }}
           />
         </div>
