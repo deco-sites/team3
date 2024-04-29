@@ -40,7 +40,8 @@
       "mobile": 2,
       "desktop": 6
     },
-    "__resolveType": "site/sections/Images/BannerGrid.tsx"
+    "__resolveType": "site/sections/Images/BannerGrid.tsx",
+    "title": " "
   },
   "Benefits - 01": {
     "benefits": [
