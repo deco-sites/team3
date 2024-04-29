@@ -181,10 +181,10 @@
       {
         "alt": "/feminino",
         "action": {
-          "href": "https://www.deco.cx/",
-          "label": "deco.cx",
-          "title": "VTEX Store",
-          "subTitle": "Visit our site and start building now:"
+          "label": " ",
+          "subTitle": " ",
+          "href": "/",
+          "title": " "
         },
         "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/b58f5ae7-3316-4513-b247-340bcf123fd2",
         "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8314/e5de99d1-e8b9-4e09-a6c9-068ba6e4f187"
