@@ -54,7 +54,7 @@ function ProductCard({
     <div
       id={id}
       data-deco="view-product"
-      class="card card-compact group w-full lg:border lg:border-transparent lg:hover:border-inherit lg:p-4"
+      class="card card-compact group w-full lg:border lg:border-transparent lg:hover:border-inherit lg:p-4 relative"
     >
       {/* Add click event to dataLayer */}
       <SendEventOnClick
@@ -75,7 +75,7 @@ function ProductCard({
         }}
       />
 
-      <div class="flex flex-col gap-2 lg:group-hover:-translate-y-2">
+      <div class="flex flex-col gap-2 relative">
         <figure
           class="relative overflow-hidden"
           style={{ aspectRatio }}
@@ -160,58 +160,35 @@ function ProductCard({
           </a>
         </figure>
 
-        {/* SKU Selector */}
-        <ul class="flex items-center justify-center gap-2">
-          {variants
-            .map(([value, link]) => [value, relative(link)] as const)
-            .map(([value, link]) => (
-              <li>
-                <a href={link}>
-                  <Avatar
-                    content={value}
-                    variant={link === relativeUrl
-                      ? "active"
-                      : link
-                      ? "default"
-                      : "disabled"}
-                  />
-                </a>
-              </li>
-            ))}
-        </ul>
-
         {/* Name/Description */}
         <div class="flex flex-col">
           <h2
-            class="truncate text-base lg:text-lg uppercase"
+            class="truncate text-base lg:text-lg uppercase text-black"
             dangerouslySetInnerHTML={{ __html: name ?? "" }}
-          />
-
-          <div
-            class="truncate text-xs"
-            dangerouslySetInnerHTML={{ __html: description ?? "" }}
           />
         </div>
 
         {/* Price from/to */}
-        <div class="flex gap-2 items-center justify-end font-light">
+        <div class="flex gap-2 items-center justify-start font-light">
+          <span class="font-bold text-black text-sm">
+            {formatPrice(price, offers?.priceCurrency)}
+          </span>
           <span class="line-through text-sm">
             {formatPrice(listPrice, offers?.priceCurrency)}
-          </span>
-          <span>
-            {formatPrice(price, offers?.priceCurrency)}
           </span>
         </div>
 
         {/* Installments */}
-        <span class="flex justify-end gap-2 font-light text-sm truncate">
-          ou {installments}
-        </span>
+        {installments && (
+          <span class="flex gap-2 font-light text-sm truncate w-full text-left">
+            ou {installments}
+          </span>
+        )}
 
         <a
           href={relativeUrl}
           aria-label="view product"
-          class="btn btn-block"
+          class="btn btn-block hidden group-hover:flex absolute bottom-4 font-bold"
         >
           Ver produto
         </a>
