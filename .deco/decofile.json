@@ -1,4 +1,22 @@
 {
+  "BATATA": {
+    "__resolveType": "site/sections/Header/Header.tsx",
+    "alerts": [],
+    "searchbar": {
+      "placeholder": "What are you looking for?",
+      "action": "/s",
+      "name": "q",
+      "loader": {
+        "data": {
+          "searches": [],
+          "products": []
+        },
+        "__resolveType": "resolved"
+      }
+    },
+    "navItems": [],
+    "logoPosition": "left"
+  },
   "Banner Grid - 01": {
     "title": "Summer bags",
     "banners": [
@@ -2739,6 +2757,16 @@
     ],
     "__resolveType": "commerce/loaders/navbar.ts"
   },
+  "pages-My%20New%20Page-346980": {
+    "name": "My New Page",
+    "path": "/example-path",
+    "sections": [
+      {
+        "__resolveType": "Header - 01"
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx"
+  },
   "pages-aiassistant-c38e51d3049a": {
     "name": "AI Assistant",
     "path": "/ai-assistant-deco-test",
@@ -3185,7 +3213,7 @@
           "props": {
             "sort": "price:desc",
             "count": 6,
-            "collection": "145",
+            "collection": "219",
             "similars": false
           },
           "crossSelling": "similars",
@@ -3491,33 +3519,5 @@
   },
   "weather": {
     "__resolveType": "decohub/apps/weather.ts"
-  },
-  "pages-My%20New%20Page-346980": {
-    "name": "My New Page",
-    "path": "/example-path",
-    "sections": [
-      {
-        "__resolveType": "Header - 01"
-      }
-    ],
-    "__resolveType": "website/pages/Page.tsx"
-  },
-  "BATATA": {
-    "__resolveType": "site/sections/Header/Header.tsx",
-    "alerts": [],
-    "searchbar": {
-      "placeholder": "What are you looking for?",
-      "action": "/s",
-      "name": "q",
-      "loader": {
-        "data": {
-          "searches": [],
-          "products": []
-        },
-        "__resolveType": "resolved"
-      }
-    },
-    "navItems": [],
-    "logoPosition": "left"
   }
 }
